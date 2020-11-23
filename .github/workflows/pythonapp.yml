@@ -42,7 +42,7 @@ jobs:
           dir
           pip install .
         env:
-          EIGEN_DIR: $GITHUB_WORKSPACE/Eigen.3.3.3
+          Eigen3_DIR: $GITHUB_WORKSPACE/Eigen.3.3.3
       - name: Run units tests
         run: |
           pip install pytest pytest-xdist numpy sympy
