@@ -38,6 +38,8 @@ jobs:
           flake8 --statistics test/
       - name: Install libtab
         run: |
+          dir
+          export EIGEN_DIR=.
           pip install .
       - name: Run units tests
         run: |
