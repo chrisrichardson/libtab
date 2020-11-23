@@ -11,7 +11,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ubuntu-latest, macos-latest]
+        os: [ubuntu-latest, windows-latest]
         python-version: [3.x]
 
     steps:
@@ -26,8 +26,8 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libeigen3-dev
       - name: Install dependencies (non-Python, macOS)
-        if: runner.os == 'macOS'
-        run: brew install eigen
+        if: runner.os == 'Windows'
+        run: nuget install Eigen
       - name: Install dependencies (Python)
         run: |
           pip install --upgrade pip
