@@ -29,6 +29,7 @@ jobs:
         if: runner.os == 'Windows'
         run: |
           nuget install Eigen
+          pip install . -DEIGEN3_INCLUDE_DIR=$GITHUB_WORKSPACE/Eigen.3.3.3/build/native/include
       - name: Install dependencies (Python)
         run: |
           pip install --upgrade pip
